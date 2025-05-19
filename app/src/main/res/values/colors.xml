@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primaryColor">#6200EE</color>
+    <color name="errorColor">#B00020</color>
+    <color name="primaryTextColor">#212121</color>
+    <color name="secondaryTextColor">#757575</color>
+    <color name="tertiaryTextColor">#BDBDBD</color>
+    <color name="login_background">#F4F4F4</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_text">#212121</color>
+    <color name="input_stroke">#CCCCCC</color>
+
+
+    <color name="green">#065850</color>
+    <color name="amarelo">#ffd30b</color>
+    <color name="azul">#123063</color>
+    <color name="azul2">#0a1f3d</color>
+    <color name="azul3">#0092FF</color>
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+
+        <!-- Campo Título -->
+        <EditText
+            android:id="@+id/edtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/input_background"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Campo para título do livro"/>
+
+        <!-- Campo Autor -->
+        <EditText
+            android:id="@+id/edtAutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Autor"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/input_background"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Campo para nome do autor"/>
+
+        <!-- CheckBox Disponibilidade -->
+        <CheckBox
+            android:id="@+id/ckDisponivel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disponível"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/black"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Marque para indicar que o livro está disponível"/>
+
+        <!-- Campo URL da Imagem -->
+        <EditText
+            android:id="@+id/edtImagemUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL da Imagem"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_background"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Campo para inserir a URL da imagem"/>
+
+        <!-- Botão Salvar -->
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/primary"
+            android:padding="14dp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Botão para salvar os dados do livro"/>
+
+    </LinearLayout>
+
+</ScrollView>

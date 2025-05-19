@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:scrollbars="vertical"
+    tools:context=".PegarLivroActivity">
+
+    <!-- Imagem do livro -->
+    <ImageView
+        android:id="@+id/pg_fotoLivro"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!-- Nome do Livro -->
+    <TextView
+        android:id="@+id/pg_nomeLivro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:lines="2"
+        android:text="Livro"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Nome da Pessoa -->
+    <TextView
+        android:id="@+id/pgNomePessoa"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Nome da Pessoa "
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:lines="1"
+        android:background="@drawable/yellow_bt"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <!-- Setor -->
+    <TextView
+        android:id="@+id/pgSetor"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Setor"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="bold"
+        android:lines="1"
+        android:background="@drawable/yellow_bt"
+        android:textColor="#212121"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <!-- Botão de Confirmação de Empréstimo -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFinalizarEmprestimo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Finalizar Emprestimo Comprovante"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/azul2"
+        android:background="@drawable/yellow_bt"
+        android:backgroundTint="@color/amarelo"
+        android:layout_marginTop="30dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnComprovante"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text=" Comprovante na tela "
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAllCaps="true"
+        android:textColor="@color/azul2"
+        android:background="@drawable/yellow_bt"
+        android:backgroundTint="@color/amarelo"
+        android:layout_marginTop="30dp"/>
+
+
+</LinearLayout>

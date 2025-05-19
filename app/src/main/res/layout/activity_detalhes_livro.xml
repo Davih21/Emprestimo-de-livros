@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.client.DetalhesLivroActivity">
+
+    <!-- Imagem do livro -->
+    <ImageView
+        android:id="@+id/dt_fotoLivro"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!-- Nome do Livro -->
+    <TextView
+        android:id="@+id/dt_nomeLivro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:text="Livro"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Autor do Livro -->
+    <TextView
+        android:id="@+id/dt_autorLivro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="Autor: Famoso Autor"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp" />
+
+    <!-- Disponibilidade -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Disponibilidade:"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDisponibilidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/availability_background"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Disponível"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <!-- Botão de Solicitação -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_solicitarLivro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/yellow_bt"
+        android:padding="16dp"
+        android:text="Solicitar empréstimo"
+        android:textColor="@color/azul2"
+        android:textSize="18sp" />
+
+</LinearLayout>

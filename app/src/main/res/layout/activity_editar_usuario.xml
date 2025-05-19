@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Campo Nome -->
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/input_background"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textPersonName"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para nome do usuário"/>
+
+    <!-- Campo Nome -->
+    <EditText
+        android:id="@+id/editTextSetor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Setor"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/input_background"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="text"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para setor do usuário"/>
+
+    <!-- Campo Email -->
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/input_background"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textEmailAddress"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para email do usuário"/>
+
+    <!-- Campo Senha -->
+    <EditText
+        android:id="@+id/editTextSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Senha"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/input_background"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="textPassword"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para senha do usuário"/>
+
+    <!-- Campo Tipo -->
+    <EditText
+        android:id="@+id/editTextTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo (admin/cliente)"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/input_background"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:inputType="text"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Campo para definir tipo de usuário"/>
+
+    <!-- Botão Salvar -->
+    <Button
+        android:id="@+id/btnSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/primary"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="14dp"
+        android:importantForAccessibility="yes"
+        android:contentDescription="Botão para salvar os dados do usuário"/>
+</LinearLayout>
