@@ -11,6 +11,7 @@ import android.database.Cursor;
 import android.os.Handler;
 import android.os.RemoteException;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -57,8 +58,8 @@ public class ClienteActivity  extends FullScreenActivity {
         setContentView(R.layout.activity_cliente);
 
         // Inicializando a camera
-        mDecodeManager = DeviceServiceManager.getInstance().getCameraManager();
-        sytem = DeviceServiceManager.getInstance().getSystemManager();
+//        mDecodeManager = DeviceServiceManager.getInstance().getCameraManager();
+//        sytem = DeviceServiceManager.getInstance().getSystemManager();
 
         edtBuscar = findViewById(R.id.edtBuscar);
         recyclerViewLivros = findViewById(R.id.recyclerViewLivros);
@@ -140,79 +141,85 @@ public class ClienteActivity  extends FullScreenActivity {
         }
     }
 
-    private void startDecode() {
-        if (!isDecoding) {
-            try {
-
-                //Inicializa o parametro do scan
-
-                DecodeParameter decodeParameter = new DecodeParameter();
-                decodeParameter
-                        .setDecodeMode(DecodeMode.MODE_SINGLE_SCAN_CODE)
-                        .setFlashLightTimeout(0xffffffff);
-                mDecodeManager.startDecode(decodeParameter, new AidlDecodeCallBack.Stub() {
-                    @Override
-                    public void onResult(String s) throws RemoteException {
-                        handleDecode(s);
-                    }
-
-                    @Override
-                    public void onError(int i) throws RemoteException {
-                    }
-                });
-                isDecoding = true;
-
-            } catch (RemoteException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    private void handleDecode(String result) throws RemoteException {
-        if (result != null) {
-            playBeepSound();
-            mDecodeManager.playDecodeSucLight();
-            runOnUiThread(() -> {
-                if (edtBuscar != null) {
-                    edtBuscar.setText(result); // ou cleanedResult
-                    Toast.makeText(mContext, "Código lido: " + result, Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(mContext, "edtBuscar está null", Toast.LENGTH_LONG).show();
-                }
-            });
-
-
-            handler1.postDelayed(this::restartDecode, 2000);
-        }
-    }
-
-
-    private void initBeepSound() {
-        mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        mSuccessSound = mSoundPool.load(this, R.raw.beep1, 1);
-    }
-
-    private void playBeepSound() {
-        mSoundPool.play(mSuccessSound, 1.0f, 1.0f, 0, 0, 1.0f);
-    }
+//    private void startDecode() {
+//        if (mDecodeManager == null) {
+//            Log.e("ClienteActivity", "mDecodeManager está null! Não é possível iniciar o scan.");
+//            return;
+//        }
+//
+//        if (!isDecoding) {
+//            try {
+//                DecodeParameter decodeParameter = new DecodeParameter();
+//                decodeParameter
+//                        .setDecodeMode(DecodeMode.MODE_SINGLE_SCAN_CODE)
+//                        .setFlashLightTimeout(0xffffffff);
+//
+//                mDecodeManager.startDecode(decodeParameter, new AidlDecodeCallBack.Stub() {
+//                    @Override
+//                    public void onResult(String s) throws RemoteException {
+//                        handleDecode(s);
+//                    }
+//
+//                    @Override
+//                    public void onError(int i) throws RemoteException {
+//                        Log.e("DecodeError", "Erro ao decodificar: código " + i);
+//                    }
+//                });
+//
+//                isDecoding = true;
+//
+//            } catch (RemoteException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
+//
+//
+//    private void handleDecode(String result) throws RemoteException {
+//        if (result != null) {
+//            playBeepSound();
+//            mDecodeManager.playDecodeSucLight();
+//            runOnUiThread(() -> {
+//                if (edtBuscar != null) {
+//                    edtBuscar.setText(result); // ou cleanedResult
+//                    Toast.makeText(mContext, "Código lido: " + result, Toast.LENGTH_SHORT).show();
+//                } else {
+//                    Toast.makeText(mContext, "edtBuscar está null", Toast.LENGTH_LONG).show();
+//                }
+//            });
+//
+//
+//            handler1.postDelayed(this::restartDecode, 2000);
+//        }
+//    }
 
 
-    private void restartDecode() {
-        stopDecode();
-
-        handler1.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                startDecode();
-            }
-        }, 1000);
-    }
+//    private void initBeepSound() {
+//        mSoundPool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+//        mSuccessSound = mSoundPool.load(this, R.raw.beep1, 1);
+//    }
+//
+//    private void playBeepSound() {
+//        mSoundPool.play(mSuccessSound, 1.0f, 1.0f, 0, 0, 1.0f);
+//    }
+//
+//
+//    private void restartDecode() {
+//        stopDecode();
+//
+//        handler1.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                startDecode();
+//            }
+//        }, 1000);
+//    }
 
     @Override
     protected void onResume() {
         super.onResume();
-        initBeepSound();
-        startDecode();
+//        initBeepSound();
+//        startDecode();
     }
 
     @Override

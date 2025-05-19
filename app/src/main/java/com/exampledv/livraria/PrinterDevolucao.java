@@ -68,16 +68,16 @@ public class PrinterDevolucao extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setMessage("Deseja imprimir outro comprovante?")
                 .setPositiveButton("Sim", (dialog, id) -> {
-                    startActivity(new Intent(PrinterDevolucao.this, PesquisaDevolucao.class));
+                    startActivity(new Intent(PrinterDevolucao.this, MainActivity.class));
                     finish();
                 })
                 .setNegativeButton("Não", (dialog, id) -> {
-                    startActivity(new Intent(PrinterDevolucao.this, PesquisaDevolucao.class));
+                    startActivity(new Intent(PrinterDevolucao.this, MainActivity.class));
                     finish();
                 })
                 .setOnCancelListener(dialog -> {
                     // Executado quando o diálogo é cancelado (ex: clicando fora ou pressionando voltar)
-                    startActivity(new Intent(PrinterDevolucao.this, PesquisaDevolucao.class));
+                    startActivity(new Intent(PrinterDevolucao.this, MainActivity.class));
                     finish();
                 })
                 .create()

@@ -53,7 +53,7 @@ public class CupomNaTelaEmprestimo extends FullScreenActivity {
 
 
         btnFinalizarEmprestimo.setOnClickListener(v -> {
-            Intent intent = new Intent(CupomNaTelaEmprestimo.this, PesquisaEmprestar.class);
+            Intent intent = new Intent(CupomNaTelaEmprestimo.this, MainActivity.class);
             startActivity(intent);
         });
     }

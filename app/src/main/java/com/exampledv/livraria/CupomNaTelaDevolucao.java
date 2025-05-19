@@ -47,7 +47,7 @@ public class CupomNaTelaDevolucao extends FullScreenActivity {
         mostrarCupomNaTela(); // Mostra o comprovante na tela
 
         btnFinalizarDevolucao.setOnClickListener(v -> {
-            Intent intent = new Intent(CupomNaTelaDevolucao.this, PesquisaDevolucao.class);
+            Intent intent = new Intent(CupomNaTelaDevolucao.this, MainActivity.class);
             startActivity(intent);
         });
     }

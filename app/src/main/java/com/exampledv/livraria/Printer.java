@@ -58,11 +58,11 @@ public class Printer extends FullScreenActivity {
         new AlertDialog.Builder(this)
                 .setMessage("Deseja imprimir outro comprovante?")
                 .setPositiveButton("Sim", (dialog, id) -> {
-                    startActivity(new Intent(Printer.this, PesquisaEmprestar.class));
+                    startActivity(new Intent(Printer.this, MainActivity.class));
                     finish();
                 })
                 .setNegativeButton("Não", (dialog, id) -> {
-                    startActivity(new Intent(Printer.this, PesquisaEmprestar.class));
+                    startActivity(new Intent(Printer.this, MainActivity.class));
                     finish();
                 })
                 .create()
