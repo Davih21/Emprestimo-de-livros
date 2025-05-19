@@ -25,3 +25,5 @@ Facilitar o gerenciamento de livros emprestados, permitindo o registro de quem p
 ![image](https://github.com/user-attachments/assets/34324e75-075c-4037-a8b0-9a338c68e4cc)
 ![image](https://github.com/user-attachments/assets/547908f5-fa02-46ff-9f54-332f9e1b1036)
 ![image](https://github.com/user-attachments/assets/6e2b9365-da38-4ac3-8e0e-1df8a0ffd38a)
+![image](https://github.com/user-attachments/assets/04340bfd-4bcd-4560-9c76-44162261d975)
+![image](https://github.com/user-attachments/assets/d3b22f3a-1bef-46fd-bfae-c953a6032a52)
